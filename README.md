@@ -139,6 +139,18 @@ Here, `unreadMessages` is an array and `{[plural(n)]}` points to the selected in
 
 `plural()` returns zero | one | two | few | many | other, depending on `n` and the current language, as specified in the Unicode rules. If one of these indexes isn’t found, the `[other]` index will be used by default.
 
+You would then call the plural rule like this:
+
+```
+<p data-l10n-id="unreadMessages" data-l10n-args="{ n: 12 }" ></p>
+```
+
+Or in JavaScript:
+
+```
+var unreadMessagesText = document.webL10n.get('unreadMessages', {n: 12});
+```
+
 
 ### innerHTML
 
